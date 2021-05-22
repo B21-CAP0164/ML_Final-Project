@@ -32,7 +32,7 @@
 
 7. Open the project
 
-```
+```cmd
 (tf2.4) C:\Users\USER>D:
 (tf2.4) D:\>cd ML_Final-Project
 (tf2.4) D:\ML_Final-Project> jupyter notebook
