@@ -19,12 +19,24 @@
 
    - Reboot
 
-5. Install Tensorflow 2.4.0
+5. Pick one **ONLY A** or **ONLY B**. If you want both, make sure a and b are on **different environment**
+
+   a. Install Tensorflow 2.4.0
 
    - Open Anaconda Prompt
    - `conda create --name tf2.4 python==3.8`
    - `conda activate tf2.4`
    - `pip install tensorflow==2.4.0`
+
+    b. Install Pytorch
+
+    - Open Anaconda Prompt
+    - `conda create --name yolov5 python==3.8`
+    - `conda activate yolov5`
+    - `conda install pytorch==1.6.0 torchvision==0.7.0 -c pytorch`
+    - `git clone https://github.com/USC-InfoLab/rddc2020.git`
+    - `cd rddc2020; pip install -r requirements.txt`
+    - then follow [this](https://github.com/USC-InfoLab/rddc2020#rdcc-dataset-setup-for-yolov5)
 
 6. Install Jupyter Notebook
    - `conda install -y jupyter`
