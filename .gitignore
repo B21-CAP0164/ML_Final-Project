@@ -1,1 +1,5 @@
 Dataset*
+*pycache*
+*.png
+*.jpg
+*.txt

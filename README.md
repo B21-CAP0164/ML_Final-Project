@@ -38,14 +38,22 @@
     - `cd rddc2020; pip install -r requirements.txt`
     - then follow [this](https://github.com/USC-InfoLab/rddc2020#rdcc-dataset-setup-for-yolov5)
 
-6. Install Jupyter Notebook
+6. Install Jupyter Notebook **(optional)**
    - `conda install -y jupyter`
    - `conda install -y nb_conda`
 
 7. Open the project
 
-```cmd
-(tf2.4) C:\Users\USER>D:
-(tf2.4) D:\>cd ML_Final-Project
-(tf2.4) D:\ML_Final-Project> jupyter notebook
-```
+    ```cmd
+    (tf2.4) C:\Users\USER>D:
+    (tf2.4) D:\>cd ML_Final-Project
+    (tf2.4) D:\ML_Final-Project> jupyter notebook
+    ```
+
+8. Deploy
+
+   - Open Anaconda Prompt
+   - `conda activate tf2.4`
+   - `pip install Flask`
+   - `pip install opencv-python`
+   - `pip install numpy`
