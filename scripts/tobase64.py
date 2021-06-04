@@ -1,6 +1,6 @@
 import base64 
 
-PATH = 'D:\ML_Final-Project\img\dariCloud.jpg'
+PATH = 'D:\ML_Final-Project\img\\jalanbagus.jpg'
 
 with open(PATH, "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read())
