@@ -33,15 +33,15 @@ def predict():
   print(dataInBase64)
   print(type(dataInBase64))
 
-  with open("deploy2.png", "wb") as fh:
+  with open("deploy.png", "wb") as fh:
     fh.write(base64.decodebytes(dataInBase64))
   
-  img = image.load_img("deploy2.png", target_size=(100, 100))
+  img = image.load_img("deploy.png", target_size=(100, 100))
   # img = image.load_img('bondi_beach.jpg', grayscale=True)
 
   img_array = image.img_to_array(img)
 
-  image.save_img('deploy2resized.png', img_array)
+  image.save_img('deployResized.png', img_array)
   img_array = np.expand_dims(img_array, axis=0)
   images = np.vstack([img_array])
 

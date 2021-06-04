@@ -1,6 +1,6 @@
 import base64 
 
-PATH = 'test.txt'
+PATH = 'test.tmp'
 
 empty_str = b""
 
