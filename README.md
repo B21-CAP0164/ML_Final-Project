@@ -50,10 +50,4 @@
     (tf2.4) D:\ML_Final-Project> jupyter notebook
     ```
 
-8. Deploy
-
-   - Open Anaconda Prompt
-   - `conda activate tf2.4`
-   - `pip install Flask`
-   - `pip install opencv-python`
-   - `pip install numpy`
+Deployment requirements are [here](requirements.txt)

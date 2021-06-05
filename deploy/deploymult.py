@@ -4,15 +4,16 @@ import json
 import base64
 import numpy as np
 
-# os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
 import tensorflow as tf
 from keras.preprocessing import image
 from flask import Flask, request
 
-IMAGE_PATH = "../img/deploy.png"
-RESIZED_PATH = "../img/deployResized.png"
-MODEL_PATH = '../model_keras_200.h5'
+IMAGE_PATH = "deploy.png"
+RESIZED_PATH = "deployResized.png"
+MODEL_PATH = 'model_keras_200.h5'
+label = ["good", "poor", "very_poor"]
 
 app = Flask(__name__)
 
@@ -27,7 +28,7 @@ def hello():
 @app.route("/predict", methods=["POST"])
 def predict():
   request_json = request.json
-  print("data: {}".format(request_json))
+  # print("data: {}".format(request_json))
   print("type: {}".format(type(request_json)))
 
   # dataInBase64 = request_json.get('data')

@@ -1,6 +1,6 @@
 import base64 
 
-PATH = '../test.tmp'
+PATH = 'test.tmp'
 
 empty_str = b""
 
@@ -9,5 +9,5 @@ with open(PATH, "rb") as text:
 
 print(empty_str)
 
-with open("../img/imageToSave2.png", "wb") as fh:
+with open("imageToSave.png", "wb") as fh:
   fh.write(base64.decodebytes(empty_str))

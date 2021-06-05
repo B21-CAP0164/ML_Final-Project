@@ -10,9 +10,9 @@ import tensorflow as tf
 from keras.preprocessing import image
 from flask import Flask, request
 
-IMAGE_PATH = "../img/deploy.png"
-RESIZED_PATH = "../img/deployResized.png"
-MODEL_PATH = '../model_keras_200.h5'
+IMAGE_PATH = "deploy.png"
+RESIZED_PATH = "deployResized.png"
+MODEL_PATH = 'model_keras_200.h5'
 label = ["good", "poor", "very_poor"]
 
 app = Flask(__name__)
