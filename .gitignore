@@ -1,4 +1,7 @@
 Dataset*
 *pycache*
-img
+img/*
+deploy.png
+deployResized.png
+imageToSave.png
 *.tmp

@@ -1,11 +1,14 @@
 # ML_Final-Project
 
+This guide is for **Windows**. For Linux and MacOS, it should be easier :)
+
 ## Installation
 
-1. Install Anaconda
-2. Install Visual Studio Community 2019 (Core Editor Only)
-3. Install [CUDA Toolkit 11.0 Update](https://developer.download.nvidia.com/compute/cuda/11.0.3/network_installers/cuda_11.0.3_win10_network.exe)
-4. Download [cuDNN 8.0.5 for CUDA 11.0](https://developer.nvidia.com/rdp/cudnn-archive#a-collapse805-110)
+1. Install [Anaconda](https://docs.anaconda.com/anaconda/install/windows/)
+2. Install [Postman](https://www.postman.com/downloads/)
+3. Install [Visual Studio Community](https://visualstudio.microsoft.com/downloads/) (Core Editor Only)
+4. Install [CUDA Toolkit 11.0 Update](https://developer.download.nvidia.com/compute/cuda/11.0.3/network_installers/cuda_11.0.3_win10_network.exe)
+5. Download [cuDNN 8.0.5 for CUDA 11.0](https://developer.nvidia.com/rdp/cudnn-archive#a-collapse805-110)
 
    - Extract cuDNN zip file, copy all folders in `cuda` folder to `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0` (select replace)
    - Add these to `Path` environment variables
@@ -19,35 +22,47 @@
 
    - Reboot
 
-5. Pick one **ONLY A** or **ONLY B**. If you want both, make sure a and b are on **different environment**
-
-   a. Install Tensorflow 2.4.0
-
-   - Open Anaconda Prompt
+6. Create virtual environment
    - `conda create --name tf2.4 python==3.8`
    - `conda activate tf2.4`
    - `pip install tensorflow==2.4.0`
 
-    b. Install Pytorch
-
-    - Open Anaconda Prompt
-    - `conda create --name yolov5 python==3.8`
-    - `conda activate yolov5`
-    - `conda install pytorch==1.6.0 torchvision==0.7.0 -c pytorch`
-    - `git clone https://github.com/USC-InfoLab/rddc2020.git`
-    - `cd rddc2020; pip install -r requirements.txt`
-    - then follow [this](https://github.com/USC-InfoLab/rddc2020#rdcc-dataset-setup-for-yolov5)
-
-6. Install Jupyter Notebook **(optional)**
+7. Install Jupyter Notebook
    - `conda install -y jupyter`
    - `conda install -y nb_conda`
 
-7. Open the project
+8. Open the project
 
     ```cmd
-    (tf2.4) C:\Users\USER>D:
     (tf2.4) D:\>cd ML_Final-Project
-    (tf2.4) D:\ML_Final-Project> jupyter notebook
+    (tf2.4) D:\ML_Final-Project> jupyter notebook Final_Project_Bangkit.ipynb
     ```
 
-Deployment requirements are [here](requirements.txt)
+## Testing
+
+- Convert image to base64 format using [`deploy/tobase64.py`](deploy/tobase64.py) by changing `PATH` variable to your image file location. Then run this command:
+
+   ```sh
+   cd deploy
+   python tobase64.py
+   ```
+
+- Generate JSON
+  
+  ```sh
+  python generateJSON.py
+  ```
+
+- run the flask app on `deploy/deploy.py`
+  
+  ```sh
+  python deploy.py
+  ```
+
+- Copy everything from `deploy/data.json` to body like this
+
+  ![image](ssPostman.png)
+
+- Test to send POST method to `<url-where-the-flask-app-running>/predict` on Postman
+
+Deployment requirements are [here](deploy/requirements.txt)
