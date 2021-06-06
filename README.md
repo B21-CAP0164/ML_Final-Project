@@ -25,8 +25,9 @@ This guide is for **Windows**. For Linux and MacOS, it should be easier :)
 6. Create virtual environment
    - `conda create --name tf2.4 python==3.8`
    - `conda activate tf2.4`
-   - `cd ML_Final-Project`
-   - `pip install -r requirements.txt`
+   - `pip install tensorflow==2.4.0`
+   - `pip install opencv-python`
+   - `pip install numpy`
 
 7. Install Jupyter Notebook
    - `conda install -y jupyter`
@@ -34,7 +35,8 @@ This guide is for **Windows**. For Linux and MacOS, it should be easier :)
 
 8. Open the project
 
-    ```cmd
+    ```sh
+    cd ML_Final-Project
     jupyter notebook Final_Project_Bangkit.ipynb
     ```
 
@@ -64,3 +66,11 @@ This guide is for **Windows**. For Linux and MacOS, it should be easier :)
   ![image](ssPostman.png)
 
 - Test to send POST method to `<url-where-the-flask-app-running>/predict` on Postman
+
+## Deployment
+
+We use **Google Cloud Run** for the deployment of this project
+
+- [`requirements.txt`](deploy/requirements.txt)
+- [`cloudmigrate.yaml`](deploy/cloudmigrate.yaml)
+- [`Dockerfile`](deploy/Dockerfile)

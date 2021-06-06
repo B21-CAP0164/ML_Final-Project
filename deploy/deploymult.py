@@ -1,5 +1,4 @@
 import os
-import cv2
 import json
 import base64
 import numpy as np
